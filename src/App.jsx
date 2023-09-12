@@ -1,33 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState }  from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+ const API_URL = 'http://api.themoviedb.org'
+ const API_KEY = 'aed86604ab940ab3a821d5f03c7bd06b'
+ const IMAGE_PATH = 'https://image.tmdb.org/t/p/original'
+ const URL_IMAGE = 'https://image.tmdb.org/t/p/original'
+
+ //variables de estado 
+ const [movies, setMovies] = useState([])
+ const [searchKey, setSearchKey] = useState("")
+ const [trailer, setTrailer] = useState(null);
+ const [movie, setMovie] = useState ({title: "Loading Movies" }); 
+ const [playing, setPlaying] = useState (false); 
+
+ //funcion para realizar la peticion por get a la api
+
+ 
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
