@@ -1,4 +1,3 @@
-// src/components/MovieList.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TMDB_API_KEY } from '../config';

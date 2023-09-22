@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <MovieList />
       </header>
-      <BottomMenu /> {/* Agrega el componente BottomMenu en la parte inferior */}
+      <BottomMenu /> {}
     </div>
   );
 }

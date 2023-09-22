@@ -3,20 +3,20 @@
 /* Establece la cuadrícula */
 .movie-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas con un ancho mínimo de 150px */
-    gap: 20px; /* Espacio entre las imágenes */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
   }
   
   /* Estilos para cada película */
   .movie-item {
-    text-align: center; /* Centra el texto debajo de la imagen */
+    text-align: center; 
     padding: 10px;
   }
   
   /* Estilos para las imágenes */
   .movie-poster {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: auto; /* Altura automática para mantener la proporción original */
+    width: 100%; 
+    height: auto; 
     max-width: 100%;
     max-height: 150px;
 }
