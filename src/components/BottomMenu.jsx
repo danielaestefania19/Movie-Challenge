@@ -1,6 +1,6 @@
 // src/components/BottomMenu.jsx
-import React from 'react';
-import './BottomMenu.css'; // Puedes agregar estilos personalizados aquí si es necesario
+//import React from 'react';
+import './BottomMenu.css';
 
 function BottomMenu() {
   return (
@@ -16,3 +16,4 @@ function BottomMenu() {
 }
 
 export default BottomMenu;
+
