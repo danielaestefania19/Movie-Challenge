@@ -2,22 +2,22 @@
 
 /* Establece la cuadrícula */
 .movie-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-  }
-  
-  /* Estilos para cada película */
-  .movie-item {
-    text-align: center; 
-    padding: 10px;
-  }
-  
-  /* Estilos para las imágenes */
-  .movie-poster {
-    width: 100%; 
-    height: auto; 
-    max-width: 100%;
-    max-height: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+}
+
+/* Estilos para cada película */
+.movie-item {
+  text-align: center; 
+  padding: 10px;
+}
+
+/* Estilos para las imágenes */
+.movie-poster {
+  width: 100%; 
+  height: auto; 
+  max-width: 100%;
+  max-height: 150px;
 }
   

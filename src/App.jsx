@@ -7,7 +7,7 @@ import BottomMenu from './components/BottomMenu';
 function App() {
   return (
     <div className="App">
-      <BottomMenu /> {/* Mueve BottomMenu arriba */}
+      <BottomMenu /> {}
       <header className="App-header">
         <h1>Películas Populares</h1>
       </header>
@@ -19,6 +19,9 @@ function App() {
 }
 
 export default App;
+
+
+
 
 
 
