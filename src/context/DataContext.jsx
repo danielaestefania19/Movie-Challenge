@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { useFetch } from "../components/movieList";
+import { useFetch } from "../hooks/MovieList";
 
 export const DataContext = createContext();
 

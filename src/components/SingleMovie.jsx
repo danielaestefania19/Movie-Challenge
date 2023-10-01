@@ -1,4 +1,4 @@
-import { useFetch } from "./movieList";
+import { useFetch } from "../hooks/MovieList";
 import { useParams } from "react-router-dom";
 //import { useEffect } from "react";
 
