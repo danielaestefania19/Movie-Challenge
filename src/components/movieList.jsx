@@ -1,8 +1,10 @@
 import  { useEffect, useState } from 'react';
+import PropTypes from 'prop-types'
 import { TMDB_API_KEY } from '../config';
-import './movieList.css';
+import './MovieList.css'; 
 
-function MovieList() {
+function MovieList(props) {
+  const { filters } = props;
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -21,7 +23,7 @@ function MovieList() {
     };
 
     fetchMovies();
-  }, []);
+  }, [filters]);
 
   return (
     <div className="movie-list">
@@ -42,7 +44,11 @@ function MovieList() {
     </div>
   );
 }
+MovieList.propTypes = {
+  filters: PropTypes.object.isRequired,
+};
 
 export default MovieList;
+
 
 
