@@ -1,54 +1,34 @@
 import  { useEffect, useState } from 'react';
-import PropTypes from 'prop-types'
 import { TMDB_API_KEY } from '../config';
-import './MovieList.css'; 
 
-function MovieList(props) {
-  const { filters } = props;
-  const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
+// https://api.themoviedb.org/3/movie/popular?api_key=${TMDB_API_KEY}
 
+export const useFetch = (params) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [data, setData] = useState(null);
+
+  const fetchMovie = (url) => {
+      setIsLoading(true);
+      fetch(url)
+          .then(respuesta => respuesta.json())
+          .then(respuestaJson => {
+              if (respuestaJson.Response === "True") {
+                  //console.log("res: ", respuestaJson);
+                  setData(respuestaJson.Search || respuestaJson);
+                  setError(false);
+              } else {
+                  setError(true);
+              }
+              setIsLoading(false);
+          }).catch(error => {console.log(error);})
+  }
   useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${TMDB_API_KEY}`);
-        const data = await response.json();
+      fetchMovie(`${TMDB_API_KEY}${params}`);
+  }, [params])
 
-        setMovies(data.results);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchMovies();
-  }, [filters]);
-
-  return (
-    <div className="movie-list">
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        movies.map((movie) => (
-          <div key={movie.id} className="movie-item">
-            <img
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              alt={movie.title}
-              className="movie-poster"
-            />
-            <p>{movie.title}</p>
-          </div>
-        ))
-      )}
-    </div>
-  );
+  return {isLoading, error, data}
 }
-MovieList.propTypes = {
-  filters: PropTypes.object.isRequired,
-};
-
-export default MovieList;
 
 
 
