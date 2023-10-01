@@ -1,5 +1,4 @@
 import  { useEffect, useState } from 'react';
-import axios from 'axios';
 import { TMDB_API_KEY } from '../config';
 import './movieList.css';
 
@@ -10,13 +9,10 @@ function MovieList() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('https://api.themoviedb.org/3/movie/popular', {
-          params: {
-            api_key: TMDB_API_KEY,
-          },
-        });
+        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${TMDB_API_KEY}`);
+        const data = await response.json();
 
-        setMovies(response.data.results);
+        setMovies(data.results);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -48,7 +44,5 @@ function MovieList() {
 }
 
 export default MovieList;
-
-
 
 
