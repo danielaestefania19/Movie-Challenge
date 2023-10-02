@@ -1,27 +1,20 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import MainPage from './components/MainPage'
-import SingleMovie from './components/SingleMovie'
-import './App.css'
-
-//https://www.omdbapi.com/?apikey=c2da535b&s=troya
-
-//https://www.omdbapi.com/?apikey=c2da535b&i=tt11796304
+//import React from 'react';
+import './App.css';
+import BottomMenu from './components/BottomMenu';
+import MovieList from './components/MovieList';
 
 function App() {
-
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<MainPage/>} />
-          <Route path='/movies/:id' element={<SingleMovie/>} />
-        </Routes>
-      </BrowserRouter>
+      <BottomMenu/>
+      <h1>Popular Movies</h1>
+      <MovieList />
+        
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 
 
 
