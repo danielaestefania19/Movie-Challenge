@@ -1,5 +1,5 @@
 //import React from 'react';
-import './BottomMenu.css'; // Puedes agregar estilos personalizados aquí si es necesario
+import './BottomMenu.css'; 
 
 function BottomMenu() {
   return (

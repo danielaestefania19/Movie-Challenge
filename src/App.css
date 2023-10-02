@@ -1,7 +1,3 @@
-/* App.css */
-
-/* Estilos generales de la aplicación */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,8 +14,6 @@ body {
     margin: 20px 0;
   }
   
-  /* Estilos para MovieList.jsx */
-  
   .movie-list {
     display: flex;
     flex-wrap: wrap;
@@ -27,15 +21,13 @@ body {
     gap: 20px;
     margin: 20px;
   }
-  
-  /* Estilos para el campo de búsqueda */
-  
+   
   .search-container {
       text-align: center;
-      margin: 3% auto; /* Cambia '3%' a 'auto' para centrar verticalmente */
-      display: flex; /* Añade esto */
-      justify-content: center; /* Añade esto para centrar horizontalmente */
-      align-items: center; /* Añade esto para centrar verticalmente */
+      margin: 3% auto; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
     }
     
     .search-input {
@@ -49,12 +41,10 @@ body {
       max-width: 400px;
     }
   
-  /* Estilos para las imágenes de las películas */
-  
   .movie-poster {
     max-width: 100%;
     height: auto;
-    max-height: 300px; /* Reducir la altura máxima de las imágenes */
+    max-height: 300px; 
   }
   
   .movie-title {
@@ -64,9 +54,9 @@ body {
   
   .description-popup {
     position: fixed;
-    top: 50%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Centrar absolutamente en el centro */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -87,13 +77,13 @@ body {
     }
     
     .description-popup h2 {
-      font-size: 20px; /* Tamaño de fuente más pequeño */
+      font-size: 20px; 
       color: #fff;
       margin-bottom: 10px;
     }
     
     .description-popup p {
-      font-size: 16px; /* Tamaño de fuente más pequeño */
+      font-size: 16px; 
       color: #fff;
       max-width: 80%;
       text-align: center;
